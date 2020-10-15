@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--<div class="loader"></div>-->
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
     <a class="navbar-brand" href="index.php">
@@ -30,10 +29,13 @@
     </div>
   </div>
 </nav>
-<!-- END nav -->
 
 <div class="hero-wrap js-fullheight">
-  <div class="overlay"></div>
+  <div class="overlay">
+    <video autoplay muted loop id="myVideo" style="width: 100%;height: 100vh;">
+      <source src="images/exp.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
       <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
@@ -41,17 +43,16 @@
         <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Services</h1>
       </div>
       <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-        <img  src="images/Black-Hole-Star-NASA-580-5.jpg" style="">
+
       </div>
     </div>
   </div>
-  <div id="particles-js"></div>
 </div>
 
-<section class="ftco-section">
+<section class="ftco-section" style="padding: 50px 0;">
   <div class="container">
     <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-6 text-center heading-section ftco-animate">
+      <div class="col-md-12 text-center heading-section ftco-animate">
         <span class="subheading">Our Services</span>
         <h2 class="mb-4">Web &amp; Mobile app design, bring your ideas to life</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
@@ -98,42 +99,24 @@
     </div>
     <div class="row mt-5">
       <div class="col-md-4 ftco-animate">
-        <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>-->
         <ul class="list-services">
           <li><h3># Web Design</h3></li>
           <li>We will design a website that reflects the essence and values of your company.</li>
         </ul>
       </div>
       <div class="col-md-4 ftco-animate">
-        <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>-->
         <ul class="list-services">
           <li><h3># Video Conception</h3></li>
           <li>We use new trends in video design to give you excellence.</li>
         </ul>
       </div>
       <div class="col-md-4 ftco-animate">
-        <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>-->
         <ul class="list-services">
           <li><h3># 2D and 3D</h3></li>
           <li>We will give you a different perspective for your ideas and project.</li>
         </ul>
       </div>
     </div>
-    <!--<div class="row mt-5">-->
-    <!--<div class="col-md-12">-->
-    <!--<h3>1) Web Design</h3>-->
-    <!--<h4>We will design a website that reflects the essence and values of your company.</h4>-->
-    <!--</div>-->
-    <!--<div class="col-md-12">-->
-    <!--<h3>2) Video Conception</h3>-->
-    <!--<h4>We use new trends in video design to give you excellence.</h4>-->
-    <!--</div>-->
-    <!--<div class="col-md-12">-->
-    <!--<h3>3) 2D and 3D</h3>-->
-    <!--<h4>We will give you a different perspective for your ideas and project.</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-  </div>
 </section>
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -163,7 +146,7 @@
           <ul class="list-unstyled">
             <li><a href="#" class="py-2 d-block">3095 Autoroute Jean-Noel-Lavoie, Laval, Quebec, H7P4w5</a></li>
             <li><a href="#" class="py-2 d-block">(514) 973-2798</a></li>
-            <li><a href="#" class="py-2 d-block">l.cousineau@panthormarketing.com</a></li>
+            <li><a href="mailto:l.cousineau@panthormarketing.com" class="py-2 d-block">l.cousineau@panthormarketing.com</a></li>
           </ul>
         </div>
       </div>
@@ -198,16 +181,10 @@
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/aos.js"></script>
 <!--<script src="js/jquery.timepicker.min.js"></script>-->
-<script src="js/particles.min.js"></script>
+<!--<script src="js/particles.min.js"></script>-->
 <script src="js/main.js"></script>
 
-<style>
-  /*.hero-wrap .overlay {*/
-    /*!*background-image: url(images/aboutus.jpeg);*!*/
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
-  /*}*/
-</style>
+
 <script src="js/stats.min.js"></script>
 <style>
   canvas {
@@ -264,153 +241,10 @@
   }
 </style>
 <script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 355,
-        "density": {
-          "enable": true,
-          "value_area": 789.1476416322727
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.48927153781200905,
-        "random": false,
-        "anim": {
-          "enable": true,
-          "speed": 0.2,
-          "opacity_min": 0,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 5,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 2,
-          "size_min": 0,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": false,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 0.2,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "bubble"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 83.91608391608392,
-          "size": 1,
-          "duration": 3,
-          "opacity": 1,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true
-  });
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  //    document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-//      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);;
 
-  const bg = document.querySelector('#particles-js');
-  const windowWidth = window.innerWidth / 5;
-  const windowHeight = window.innerHeight / 5 ;
 
-  bg.addEventListener('mousemove', (e) => {
-    console.log("df");
-    const mouseX = e.clientX / windowWidth;
-    const mouseY = e.clientY / windowHeight;
-    bg.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
-  });
 
 </script>
-<!--&lt;!&ndash; loader &ndash;&gt;-->
-<!--<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>-->
-<!--<script src="js/main.js"></script>-->
-<!--<script>-->
-  <!--$(window).load(function(){-->
-    <!--$('.loader').fadeOut();-->
-  <!--});-->
-<!--</script>-->
+
 </body>
 </html>
